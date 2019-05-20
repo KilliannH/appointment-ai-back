@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-// Song
+
 Route::group(['middleware' => ['jwt.verify']], function() {
 
     Route::get('/appointments', [

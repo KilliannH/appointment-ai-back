@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Appointment;
-use App\Artist;
-use App\Song;
 use App\User;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -15,7 +13,6 @@ class AppointmentController extends Controller {
         $appointment->name = $request->input('name');
         $appointment->date = $request->input('date');
         $appointment->sent = $request->input('sent');
-        $appointment->voice_alerted = $request->input('voice_alerted');
 
         $connectedUser = JWTAuth::user();
 
@@ -51,7 +48,6 @@ class AppointmentController extends Controller {
         $appointment->name = $request->input('name');
         $appointment->date = $request->input('date');
         $appointment->sent = $request->input('sent');
-        $appointment->voice_alerted = $request->input('voice_alerted');
 
         if($request->input('user_id')) {
             $userId = $request->input('user_id');

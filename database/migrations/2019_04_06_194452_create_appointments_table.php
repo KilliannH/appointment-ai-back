@@ -18,7 +18,6 @@ class CreateAppointmentsTable extends Migration
             $table->text('name');
             $table->integer('date');
             $table->boolean('sent');
-            $table->boolean('voice_alerted');
             $table->integer('user_id')->unsigned();
         });
     }
